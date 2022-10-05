@@ -1,0 +1,9 @@
+def digital_root(n):
+    total = 0;
+    for c in map(int, str(n)):
+        total += c
+        
+    if(len(str(total)) != 1):
+        return digital_root(total)
+    else:
+        return total
